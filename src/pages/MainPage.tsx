@@ -14,7 +14,7 @@ import ShowMore from "../components/ShowMore";
 const MainPage = () => {
   // Define the state and the type of the data to be stored in the state
   const [cars, setCars] = useState<CarType[]>([]);
-  // eslint-disable-next-line no-unused-vars
+  // @ts-ignore
   const [params, setParams] = useSearchParams();
 
   useEffect(() => {

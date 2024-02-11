@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react';
-import ReactSelect from 'react-select';
-import { makes } from '../../constants';
-import { OptionType } from '../../types';
-import { useSearchParams } from 'react-router-dom';
+import { useMemo, useState } from "react";
+import ReactSelect from "react-select";
+import { makes } from "../../constants";
+import { OptionType } from "../../types";
+import { useSearchParams } from "react-router-dom";
 
 type ButtonProps = {
   styling: string;
@@ -18,9 +18,9 @@ const SearchButton = ({ styling }: ButtonProps) => {
 };
 
 const SearchBar = () => {
-  const [make, setMake] = useState<string>('');
-  const [model, setModel] = useState<string>('');
-
+  const [make, setMake] = useState<string>("");
+  const [model, setModel] = useState<string>("");
+  // @ts-ignore
   const [params, setParams] = useSearchParams();
 
   // eventlerde parametrelin tipini kendimiz tanımlyamıyacağımzdan (çok fazla veri)
@@ -57,11 +57,7 @@ const SearchBar = () => {
         <SearchButton styling="sm:hidden" />
       </div>
       <div className="searchbar__item">
-        <img
-          width={25}
-          className="absolute ml-4"
-          src="/model-icon.png"
-        />
+        <img width={25} className="absolute ml-4" src="/model-icon.png" />
         <input
           onChange={(e) => setModel(e.target.value)}
           className="searchbar__input rounded text-black"
